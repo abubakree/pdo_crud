@@ -1,4 +1,5 @@
 <?php
+
 class Db {
 public $database;
 public function __construct(){
@@ -28,4 +29,9 @@ catch (PDOException $e) {
 echo $e->getMessage();
 }
 }
+private function disconnect(){
+$this->database = null;
+}
+}
+?>
 
